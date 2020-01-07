@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="src/font/iconfont.css">
+</head>
+<body>
+    <div class="yugao_content">
+        <div class="yugao_title">
+            <div class="left_ligth_box">
+                <p></p>
+                <p></p>
+            </div>
+            <!--<img src="imgs/biaoti.png" alt="">-->
+            <div class="right_ligth_box">
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <span class="in_map">进入地图</span>
+        <span class="back_center">返回控制中心</span>
+        <div class="content_box">
+            <div id="indexPage">
+                <div id="particles-js" class="bg_box">
+                    <canvas id="nebula" width="1842" height="669"></canvas>
+                </div>
+                <div class="items_box">
+                    <ul class="item_lists">
+                        <li data-index="0">
+                            <div class="">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p class="iconfont iconziyuan"></p>
+                            </div>
+                            <p>首页</p>
+                        </li>
+                        <li data-index="1">
+                            <div class="">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p class="iconfont iconflag-fill"></p>
+                            </div>
+                            <p>企业文化中心</p>
+                        </li>
+                        <li data-index="2">
+                            <div class="">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p class="iconfont iconshanxingtux"></p>
+                            </div>
+                            <p>进度管控中心</p>
+                        </li>
+                        <li data-index="3">
+                            <div class="">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p  style="font-size: 40px" class="iconfont iconwenjian"></p>
+                            </div>
+                            <p>项目管控中心</p>
+                        </li>
+                    </ul>
+                    <ul class="item_lists">
+                        <li data-index="4">
+                            <div class="">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p class="iconfont iconxinhao"></p>
+                            </div>
+                            <p>效能监察中心</p>
+                        </li>
+                        <li data-index="5">
+                            <div class="">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p class="iconfont iconjichusheshi"></p>
+                            </div>
+                            <p>分拨调度中心</p>
+                        </li>
+                        <li  data-index="6">
+                            <div class="">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p class="iconfont iconminzhengxinxi-kunnandangyuan"></p>
+                            </div>
+                            <p>党建主题中心</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="src/js/lib/particles.min.js"></script>
+<script src="src/js/lib/flexible.js"></script>
+<script src="src/js/lib/jquery-1.12.4.js"></script>
+<script src="src/js/lib/three.js"></script>
+<!--<script src="https://cdn.bootcss.com/three.js/r76/three.min.js"></script>-->
+<script src="src/js/index.js"></script>
+<script>
+    $('.item_lists>li').on({
+        'click':function () {
+            window.location.href='index.html?id='+$(this).attr('data-index')
+        }
+    })
+</script>
+</html>

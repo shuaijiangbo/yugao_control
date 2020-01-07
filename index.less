@@ -1,0 +1,2157 @@
+
+html, body, h1, h2, h3, h4, h5, h6, p, ul, li, input, button, textarea, section {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  -webkit-user-select: none;
+  user-select: none;
+  overflow-x: hidden;
+  font-family:"Microsoft Yahei";
+}
+body, input, button, textarea {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  border: none;
+  outline: none;
+}
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+li{list-style:none}
+.hide{
+  display: none;
+}
+
+body{
+  background: #111;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+  .yugao_content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .yugao_title {
+      height: 10%;
+      width: 100%;
+      background: url("imgs/top.png") no-repeat;
+      background-size: 100% 100%;
+      text-align: center;
+      z-index: 9;
+      img{
+        margin-top: .6%;
+      }
+      .left_ligth_box{
+        position: absolute;
+        top: 3%;
+        left: 26.2%;
+        width: 4.1%;
+        p:nth-child(1){
+          width: 14px;
+          height: 30px;
+          transform: skewX(49deg);
+          background: #09a595;
+          display: inline-block;
+          vertical-align: top;
+          border-radius: 2px;
+          margin: 0 2px;
+          animation: ani_show 1s linear infinite;
+          animation-delay: 1s;
+        }
+
+      p:nth-child(2){
+        width: 14px;
+        height: 30px;
+        transform: skewX(49deg);
+        background: #00ffe4;
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 2px;
+        margin: 0 2px;
+        animation: ani_show 1s linear infinite;
+        animation-delay: 1.2s;
+      }
+    }
+      .right_ligth_box{
+        position: absolute;
+        top: 3%;
+        right: 26.2%;
+        width: 4.1%;
+        p:nth-child(1){
+          width: 14px;
+          height: 30px;
+          transform: skewX(-49deg);
+          background: #09a595;
+          display: inline-block;
+          vertical-align: top;
+          border-radius: 2px;
+          margin: 0 2px;
+          animation: ani_show 1s linear infinite;
+          animation-delay: 1s;
+        }
+
+        p:nth-child(2){
+          width: 14px;
+          height: 30px;
+          transform: skewX(-49deg);
+          background: #00ffe4;
+          display: inline-block;
+          vertical-align: top;
+          border-radius: 2px;
+          margin: 0 2px;
+          animation: ani_show 1s linear infinite;
+          animation-delay: 1.2s;
+        }
+      }
+    }
+    .in_map,.back_center{
+      background: url("imgs/btn.png") no-repeat;
+      background-size: 100% 100%;
+      text-align: center;
+      width: 175px;
+      height: 65px;
+      line-height: 65px;
+      font-size: 18px;
+      color: #bde8eb;
+      position: absolute;
+      right: 2%;
+      top: 10%;
+      z-index: 99;
+    }
+    .content_box {
+      width: 100%;
+      flex: auto;
+      margin-top: -2%;
+      #indexPage {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        div.bg_box{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          .particles-js-canvas-el{
+            position: absolute;
+            top: 0;
+          }
+        }
+        div.items_box{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          height: 90%;
+          .item_lists {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 1.54rem;
+            margin-bottom: 1%;
+            li {
+              margin: 0 40px;
+              width: 15%;
+              height: 1.54rem;
+              background: url("imgs/home_big_btn_n.png") no-repeat;
+              background-size: 100% 100%;
+              z-index: 9;
+              animation: fangdasuoxiao1 10s linear infinite;
+              > div {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                > p {
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  transform: translate(-50%, -50%);
+                  width: 100%;
+                  height: 100%;
+                  &:nth-child(1) {
+                    background: url("imgs/quan_1.png") no-repeat center center;
+                    animation: xuanzhuan 50s linear infinite;
+                  }
+                  &:nth-child(2) {
+                    background: url("imgs/quan_2.png") no-repeat center center;
+                    animation: xuanzhuan 50s linear infinite;
+                  }
+                  &:nth-child(3) {
+                    background: url("imgs/quan_3.png") no-repeat center center;
+                    animation: xuanzhuan 20s linear infinite;
+                  }
+                  &:nth-child(4) {
+                    text-align: center;
+                    line-height:1.56rem;
+                    font-size: 52px;
+                    color: #00dec9;
+                  }
+                }
+              }
+              > p {
+                color: #00dec9;
+                font-size: 30px;
+                line-height: 60px;
+                height: 60px;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+
+      #page2{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: url("imgs/home_bj.png") no-repeat;
+        background-size: 100% 100%;
+
+        .qiu_outer{
+          width: 3rem;
+          height: 3rem;
+          background: url("imgs/qiu_1.png") no-repeat;
+          background-size: 100% 100%;
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          animation: xuanzhuan 100s linear infinite;
+        }
+        .qiu_inner{
+          width: 2.5rem;
+          height: 2.5rem;
+         /* background: url("imgs/qiu_2.png") no-repeat;
+          background-size: 100% 100%;*/
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
+      .elem_1{
+        font-weight: 600;
+        /*  font-size: 18px !important;*/
+        }
+        .elem_2{
+          .iconfont{
+            animation: fangdasuoxiao 8s linear infinite;
+          }
+        }
+        .culture_element,.party_element{
+          display: none;
+        }
+        .element_item.active{
+          .iconfont ,.elem_1{
+            color: #fdff73 !important;
+          }
+          .elem_2{
+            background: url(imgs/liubianactive.png) no-repeat !important;
+            background-size: 100% 100% !important;
+            width: 100px !important;
+            height: 100px !important;
+          }
+        }
+
+        .position_1{
+          position: absolute;
+          top: 9%;
+          left: 25%;
+          >div.element_box{
+            .text_box{
+              >span{
+                float: left;
+              }
+              .elem_1{
+                color: #03e0c7;
+                font-size: 20px;
+                display: inline-block;
+                height: 100px;
+                margin-right: 10px;
+                line-height: 100px;
+              }
+              .elem_2{
+                width: 100px;
+                height: 100px;
+                background: url("imgs/liubian.png") no-repeat;
+                display: inline-block;
+                background-size: 100% 100%;
+                position: relative;
+                i{
+                  animation-delay: 2s;
+                }
+              }
+              &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                clear: both;
+              }
+            }
+
+            .line_box{
+                position: relative;
+                float: right;
+              .elem_3,.elem_6{
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 2px solid #02e7d1;
+                border-radius: 7px;
+                position: absolute;
+                box-shadow: 0 0 5px #02e7d1;
+                top: 0px;
+                left: -55px;
+              }
+              .elem_4{
+                display: inline-block;
+                height: 50px;
+                border-left: 2px solid #02e7d1;
+                position: absolute;
+                top: 14px;
+                left: -49px;
+              }
+              .elem_5{
+                display: inline-block;
+                width: 70px;
+                border-bottom: 2px solid #02e7d1;
+                position: absolute;
+                top: 63px;
+                left: -49px;
+              }
+              .elem_6{
+                position: absolute;
+                top: 57px;
+                left: 20px;
+              }
+            }
+          }
+        }
+        .position_2{
+          position: absolute;
+          top: 9%;
+          left: 63%;
+          >div.element_box{
+            .text_box{
+              >span{
+                float: left;
+              }
+              .elem_1{
+                color: #03e0c7;
+                font-size: 20px;
+                display: inline-block;
+                height: 100px;
+                margin-left: 10px;
+                line-height: 100px;
+              }
+              .elem_2{
+                width: 100px;
+                height: 100px;
+                background: url("imgs/liubian.png") no-repeat;
+                display: inline-block;
+                background-size: 100% 100%;
+                i{
+                  animation-delay: 4s;
+                }
+              }
+              &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                clear: both;
+              }
+            }
+
+            .line_box{
+              position: relative;
+              .elem_3,.elem_6{
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 2px solid #02e7d1;
+                border-radius: 7px;
+                position: absolute;
+                box-shadow: 0 0 5px #02e7d1;
+                top: 0px;
+                left: 43px;
+              }
+              .elem_4{
+                display: inline-block;
+                height: 50px;
+                border-left: 2px solid #02e7d1;
+                position: absolute;
+                top: 14px;
+                left: 49px;
+              }
+              .elem_5{
+                display: inline-block;
+                width: 70px;
+                border-bottom: 2px solid #02e7d1;
+                position: absolute;
+                top: 63px;
+                left: -19px;
+              }
+              .elem_6{
+                position: absolute;
+                top: 57px;
+                left: -31px;
+              }
+            }
+          }
+        }
+        .position_3{
+          position: absolute;
+          top: 28%;
+          left: 19.5%;
+          >div.element_box{
+            .text_box{
+              >span{
+                float: left;
+              }
+              .elem_1{
+                color: #03e0c7;
+                font-size: 20px;
+                display: inline-block;
+                height: 100px;
+                margin-right: 10px;
+                line-height: 100px;
+              }
+              .elem_2{
+                width: 100px;
+                height: 100px;
+                background: url("imgs/liubian.png") no-repeat;
+                display: inline-block;
+                background-size: 100% 100%;
+                i{
+                  animation-delay: 6s;
+                }
+              }
+              &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                clear: both;
+              }
+            }
+
+            .line_box{
+              position: relative;
+              float: right;
+              .elem_3,.elem_6{
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 2px solid #02e7d1;
+                border-radius: 7px;
+                position: absolute;
+                box-shadow: 0 0 5px #02e7d1;
+                top: 0px;
+                left: -55px;
+              }
+              .elem_4{
+                display: inline-block;
+                height: 20px;
+                border-left: 2px solid #02e7d1;
+                position: absolute;
+                top: 14px;
+                left: -49px;
+              }
+              .elem_5{
+                display: inline-block;
+                width: 130px;
+                border-bottom: 2px solid #02e7d1;
+                position: absolute;
+                top: 34px;
+                left: -49px;
+              }
+              .elem_6{
+                position: absolute;
+                top: 28px;
+                left: 79px;
+              }
+            }
+          }
+        }
+        .position_4{
+          top: 28%;
+          left: 69.5%;
+          position: absolute;
+          >div.element_box{
+            .text_box{
+              >span{
+                float: left;
+              }
+              .elem_1{
+                color: #03e0c7;
+                font-size: 20px;
+                display: inline-block;
+                height: 100px;
+                margin-left: 10px;
+                line-height: 100px;
+              }
+              .elem_2{
+                width: 100px;
+                height: 100px;
+                background: url("imgs/liubian.png") no-repeat;
+                display: inline-block;
+                background-size: 100% 100%;
+                i{
+                  animation-delay: 8s;
+                }
+              }
+              &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                clear: both;
+              }
+            }
+
+            .line_box{
+              position: relative;
+              .elem_3,.elem_6{
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 2px solid #02e7d1;
+                border-radius: 7px;
+                position: absolute;
+                box-shadow: 0 0 5px #02e7d1;
+                top: 0px;
+                left: 43px;
+              }
+              .elem_4{
+                display: inline-block;
+                height: 20px;
+                border-left: 2px solid #02e7d1;
+                position: absolute;
+                top: 14px;
+                left: 49px;
+              }
+              .elem_5{
+                display: inline-block;
+                width: 130px;
+                border-bottom: 2px solid #02e7d1;
+                position: absolute;
+                top: 34px;
+                left: -79px;
+              }
+              .elem_6{
+                position: absolute;
+                top: 28px;
+                left: -93px;
+              }
+            }
+          }
+        }
+
+        .position_5{
+          position: absolute;
+          top: 44%;
+          left: 19.5%;
+          >div.element_box{
+            .text_box{
+              position: relative;
+              top: 67px;
+              >span{
+                float: left;
+              }
+              .elem_1{
+                color: #03e0c7;
+                font-size: 20px;
+                display: inline-block;
+                height: 100px;
+                margin-right: 10px;
+                line-height: 100px;
+              }
+              .elem_2{
+                width: 100px;
+                height: 100px;
+                background: url("imgs/liubian.png") no-repeat;
+                display: inline-block;
+                background-size: 100% 100%;
+                i{
+                  animation-delay: 10s;
+                }
+              }
+              &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                clear: both;
+              }
+            }
+
+            .line_box{
+              position: relative;
+              float: right;
+              .elem_3,.elem_6{
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 2px solid #02e7d1;
+                border-radius: 7px;
+                position: absolute;
+                box-shadow: 0 0 5px #02e7d1;
+                top: 54px;
+                left: -55px;
+              }
+              .elem_4{
+                display: inline-block;
+                height: 20px;
+                border-left: 2px solid #02e7d1;
+                position: absolute;
+                top: 36px;
+                left: -49px;
+              }
+              .elem_5{
+                display: inline-block;
+                width: 130px;
+                border-bottom: 2px solid #02e7d1;
+                position: absolute;
+                top: 34px;
+                left: -49px;
+              }
+              .elem_6{
+                position: absolute;
+                top: 28px;
+                left: 79px;
+              }
+              &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                clear: both;
+              }
+            }
+          }
+        }
+        .position_6{
+          position: absolute;
+          top: 44%;
+          left: 69.5%;
+          >div.element_box{
+            .text_box{
+              position: relative;
+              top: 67px;
+              >span{
+                float: left;
+              }
+              .elem_1{
+                color: #03e0c7;
+                font-size: 20px;
+                display: inline-block;
+                height: 100px;
+                margin-left: 10px;
+                line-height: 100px;
+              }
+              .elem_2{
+                width: 100px;
+                height: 100px;
+                background: url("imgs/liubian.png") no-repeat;
+                display: inline-block;
+                background-size: 100% 100%;
+                i{
+                  animation-delay: 12s;
+                }
+              }
+              &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                clear: both;
+              }
+            }
+
+            .line_box{
+              position: relative;
+              .elem_3,.elem_6{
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 2px solid #02e7d1;
+                border-radius: 7px;
+                position: absolute;
+                box-shadow: 0 0 5px #02e7d1;
+                top: 29px;
+                left: -90px;
+              }
+              .elem_4{
+                display: inline-block;
+                height: 20px;
+                border-left: 2px solid #02e7d1;
+                position: absolute;
+                top: 36px;
+                left: 50px;
+              }
+              .elem_5{
+                display: inline-block;
+                width: 130px;
+                border-bottom: 2px solid #02e7d1;
+                position: absolute;
+                top: 34px;
+                left: -78px;
+              }
+              .elem_6{
+                position: absolute;
+                top: 54px;
+                left: 44px;
+              }
+              &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                clear: both;
+              }
+            }
+          }
+        }
+
+        .position_7{
+          position: absolute;
+          top: 58%;
+          left: 23.5%;
+          >div.element_box{
+            .text_box{
+              position: relative;
+              top: 70px;
+              >span{
+                float: left;
+              }
+              .elem_1{
+                color: #03e0c7;
+                font-size: 20px;
+                display: inline-block;
+                height: 100px;
+                margin-right: 10px;
+                line-height: 100px;
+              }
+              .elem_2{
+                width: 100px;
+                height: 100px;
+                background: url("imgs/liubian.png") no-repeat;
+                display: inline-block;
+                background-size: 100% 100%;
+                i{
+                  animation-delay: 14s;
+                }
+              }
+              &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                clear: both;
+              }
+            }
+
+            .line_box{
+              position: relative;
+              float: right;
+              .elem_3,.elem_6{
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 2px solid #02e7d1;
+                border-radius: 7px;
+                position: absolute;
+                box-shadow: 0 0 5px #02e7d1;
+                top: 54px;
+                left: -55px;
+              }
+              .elem_4{
+                display: inline-block;
+                height: 20px;
+                border-left: 2px solid #02e7d1;
+                position: absolute;
+                top: 36px;
+                left: -49px;
+              }
+              .elem_5{
+                display: inline-block;
+                width: 100px;
+                border-bottom: 2px solid #02e7d1;
+                position: absolute;
+                top: 34px;
+                left: -49px;
+              }
+              .elem_6{
+                position: absolute;
+                top: 28px;
+                left: 51px;
+              }
+              &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                clear: both;
+              }
+            }
+          }
+        }
+
+        .position_8{
+          position: absolute;
+          top: 58%;
+          left: 64.5%;
+          >div.element_box{
+            .text_box{
+              position: relative;
+              top: 67px;
+              >span{
+                float: left;
+              }
+              .elem_1{
+                color: #03e0c7;
+                font-size: 20px;
+                display: inline-block;
+                height: 100px;
+                margin-left: 10px;
+                line-height: 100px;
+              }
+              .elem_2{
+                width: 100px;
+                height: 100px;
+                background: url("imgs/liubian.png") no-repeat;
+                display: inline-block;
+                background-size: 100% 100%;
+                i{
+                  animation-delay: 16s;
+                }
+              }
+              &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                clear: both;
+              }
+            }
+
+            .line_box{
+              position: relative;
+              .elem_3,.elem_6{
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 2px solid #02e7d1;
+                border-radius: 7px;
+                position: absolute;
+                box-shadow: 0 0 5px #02e7d1;
+                top: 29px;
+                left: -61px;
+              }
+              .elem_4{
+                display: inline-block;
+                height: 20px;
+                border-left: 2px solid #02e7d1;
+                position: absolute;
+                top: 36px;
+                left: 50px;
+              }
+              .elem_5{
+                display: inline-block;
+                width: 100px;
+                border-bottom: 2px solid #02e7d1;
+                position: absolute;
+                top: 34px;
+                left: -48px;
+              }
+              .elem_6{
+                position: absolute;
+                top: 54px;
+                left: 44px;
+              }
+              &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                clear: both;
+              }
+            }
+          }
+        }
+      /*<!--企业文化中心-->*/
+        .position_9,.position_14{
+          position: absolute;
+          top: 12%;
+          left: 27%;
+          >div.element_box{
+            .text_box{
+              >span{
+                float: left;
+              }
+              .elem_1{
+                color: #03e0c7;
+                font-size: 20px;
+                display: inline-block;
+                height: 100px;
+                margin-right: 10px;
+                line-height: 100px;
+              }
+              .elem_2{
+                width: 100px;
+                height: 100px;
+                background: url("imgs/liubian.png") no-repeat;
+                display: inline-block;
+                background-size: 100% 100%;
+                i{
+                  animation-delay: 2s;
+                }
+              }
+              &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                clear: both;
+              }
+            }
+
+            .line_box{
+              position: relative;
+              float: right;
+              .elem_3,.elem_6{
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 2px solid #02e7d1;
+                border-radius: 7px;
+                position: absolute;
+                box-shadow: 0 0 5px #02e7d1;
+                top: 0px;
+                left: -55px;
+              }
+              .elem_4{
+                display: inline-block;
+                height: 50px;
+                border-left: 2px solid #02e7d1;
+                position: absolute;
+                top: 14px;
+                left: -49px;
+              }
+              .elem_5{
+                display: inline-block;
+                width: 70px;
+                border-bottom: 2px solid #02e7d1;
+                position: absolute;
+                top: 63px;
+                left: -49px;
+              }
+              .elem_6{
+                position: absolute;
+                top: 57px;
+                left: 20px;
+              }
+            }
+          }
+        }
+        .position_10,.position_15{
+          position: absolute;
+          top: 12%;
+          left: 63%;
+          >div.element_box{
+            .text_box{
+              >span{
+                float: left;
+              }
+              .elem_1{
+                color: #03e0c7;
+                font-size: 20px;
+                display: inline-block;
+                height: 100px;
+                margin-left: 10px;
+                line-height: 100px;
+              }
+              .elem_2{
+                width: 100px;
+                height: 100px;
+                background: url("imgs/liubian.png") no-repeat;
+                display: inline-block;
+                background-size: 100% 100%;
+                i{
+                  animation-delay: 4s;
+                }
+              }
+              &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                clear: both;
+              }
+            }
+
+            .line_box{
+              position: relative;
+              .elem_3,.elem_6{
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 2px solid #02e7d1;
+                border-radius: 7px;
+                position: absolute;
+                box-shadow: 0 0 5px #02e7d1;
+                top: 0px;
+                left: 43px;
+              }
+              .elem_4{
+                display: inline-block;
+                height: 50px;
+                border-left: 2px solid #02e7d1;
+                position: absolute;
+                top: 14px;
+                left: 49px;
+              }
+              .elem_5{
+                display: inline-block;
+                width: 70px;
+                border-bottom: 2px solid #02e7d1;
+                position: absolute;
+                top: 63px;
+                left: -19px;
+              }
+              .elem_6{
+                position: absolute;
+                top: 57px;
+                left: -31px;
+              }
+            }
+          }
+        }
+
+        .position_11,.position_16{
+          position: absolute;
+          top: 31%;
+          left: 20.5%;
+          >div.element_box{
+            .text_box{
+              >span{
+                float: left;
+              }
+              .elem_1{
+                color: #03e0c7;
+                font-size: 20px;
+                display: inline-block;
+                height: 100px;
+                margin-right: 10px;
+                line-height: 100px;
+              }
+              .elem_2{
+                width: 100px;
+                height: 100px;
+                background: url("imgs/liubian.png") no-repeat;
+                display: inline-block;
+                background-size: 100% 100%;
+                i{
+                  animation-delay: 6s;
+                }
+              }
+              &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                clear: both;
+              }
+            }
+
+            .line_box{
+              position: relative;
+              float: right;
+              .elem_3,.elem_6{
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 2px solid #02e7d1;
+                border-radius: 7px;
+                position: absolute;
+                box-shadow: 0 0 5px #02e7d1;
+                top: 0px;
+                left: -55px;
+              }
+              .elem_4{
+                display: inline-block;
+                height: 20px;
+                border-left: 2px solid #02e7d1;
+                position: absolute;
+                top: 14px;
+                left: -49px;
+              }
+              .elem_5{
+                display: inline-block;
+                width: 130px;
+                border-bottom: 2px solid #02e7d1;
+                position: absolute;
+                top: 34px;
+                left: -49px;
+              }
+              .elem_6{
+                position: absolute;
+                top: 28px;
+                left: 79px;
+              }
+            }
+          }
+        }
+        .position_12,.position_17{
+          top: 34%;
+          left: 69.5%;
+          position: absolute;
+          >div.element_box{
+            .text_box{
+              >span{
+                float: left;
+              }
+              .elem_1{
+                color: #03e0c7;
+                font-size: 20px;
+                display: inline-block;
+                height: 100px;
+                margin-left: 10px;
+                line-height: 100px;
+              }
+              .elem_2{
+                width: 100px;
+                height: 100px;
+                background: url("imgs/liubian.png") no-repeat;
+                display: inline-block;
+                background-size: 100% 100%;
+                i{
+                  animation-delay: 8s;
+                }
+              }
+              &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                clear: both;
+              }
+            }
+
+            .line_box{
+              position: relative;
+              .elem_3,.elem_6{
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 2px solid #02e7d1;
+                border-radius: 7px;
+                position: absolute;
+                box-shadow: 0 0 5px #02e7d1;
+                top: 0px;
+                left: 43px;
+              }
+              .elem_4{
+                display: inline-block;
+                height: 20px;
+                border-left: 2px solid #02e7d1;
+                position: absolute;
+                top: 14px;
+                left: 49px;
+              }
+              .elem_5{
+                display: inline-block;
+                width: 130px;
+                border-bottom: 2px solid #02e7d1;
+                position: absolute;
+                top: 34px;
+                left: -79px;
+              }
+              .elem_6{
+                position: absolute;
+                top: 28px;
+                left: -93px;
+              }
+            }
+          }
+        }
+        .position_13{
+          position: absolute;
+          top: 54%;
+          left: 66.5%;
+          >div.element_box{
+            .text_box{
+              position: relative;
+              top: 67px;
+              >span{
+                float: left;
+              }
+              .elem_1{
+                color: #03e0c7;
+                font-size: 20px;
+                display: inline-block;
+                height: 100px;
+                margin-left: 10px;
+                line-height: 100px;
+              }
+              .elem_2{
+                width: 100px;
+                height: 100px;
+                background: url("imgs/liubian.png") no-repeat;
+                display: inline-block;
+                background-size: 100% 100%;
+                i{
+                  animation-delay: 10s;
+                }
+              }
+              &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                clear: both;
+              }
+            }
+
+            .line_box{
+              position: relative;
+              .elem_3,.elem_6{
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 2px solid #02e7d1;
+                border-radius: 7px;
+                position: absolute;
+                box-shadow: 0 0 5px #02e7d1;
+                top: 29px;
+                left: -90px;
+              }
+              .elem_4{
+                display: inline-block;
+                height: 20px;
+                border-left: 2px solid #02e7d1;
+                position: absolute;
+                top: 36px;
+                left: 50px;
+              }
+              .elem_5{
+                display: inline-block;
+                width: 130px;
+                border-bottom: 2px solid #02e7d1;
+                position: absolute;
+                top: 34px;
+                left: -78px;
+              }
+              .elem_6{
+                position: absolute;
+                top: 54px;
+                left: 44px;
+              }
+              &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                clear: both;
+              }
+            }
+          }
+        }
+
+        .elem_2{
+          width: 100px;
+          height: 100px;
+          background: url("imgs/liubian.png") no-repeat;
+          display: inline-block;
+          background-size: 100% 100%;
+          position: relative;
+          i{
+            font-size: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: #19fabe;
+            transform: translate(-50%,-50%);
+          }
+        }
+      }
+
+      #page3{
+        width:100%;
+        height: 100%;
+        overflow: hidden;
+        background: url("imgs/jindu_bj.png") no-repeat;
+        background-size: 100% 100%;
+        >div{
+          width:1550px;
+          height: 650px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          margin-top: 80px;
+        }
+
+        .left_item_box{
+          width: 360px;
+          .left_items{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            li{
+              height: 30%;
+              display: flex;
+              justify-content: space-around;
+              transform: translate(-100%);
+             /* animation: fangdasuoxiao2 10s linear infinite;*/
+              &.active{
+                .item_text{
+                  color:#a17c31 ;
+                  background: -webkit-linear-gradient(left, rgba(255, 174, 44, 0), rgba(255, 174, 44, 0.1), rgba(255, 174, 44, 0.3), rgba(255, 174, 44, 0));
+                  .split_line{
+                    background: radial-gradient(#a17c31 10%, rgba(255, 174, 44, 0) 60%);
+                  }
+                }
+
+                .tab_icon{
+                  position: relative;
+                  height: 185px;
+                  >div{
+                    background: url("imgs/titleiconhv.png") no-repeat;
+                    width: 185px;
+                    height:185px ;
+                    background-size: 100% 100%;
+                    animation: clockwiseRotate 5s linear infinite;
+                  }
+                  i{
+                    background: url("imgs/pro7.png") no-repeat center;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 70px;
+                    height: 70px;
+                    background-size: 100% 100%;
+                  }
+                  .icon_name{
+                    height: 20px;
+                    line-height: 20px;
+                    position: absolute;
+                    bottom: -17px;
+                    width: 100%;
+                    color: #fff;
+                  }
+                  &.tab_icon2{
+                    i{
+                      background-image: url("imgs/pro8.png")
+                    }
+                  }
+                  &.tab_icon3{
+                    i{
+                      background-image: url("imgs/pro9.png")
+                    }
+                  }
+                }
+              }
+               .item_text{
+                 font-size: 22px;
+                 text-align: center;
+                 position: relative;
+                 padding: 20px 0px 20px 0;
+                 text-align: center;
+                 transition: all .6s linear;
+                 color: #19fabd;
+                 background: -webkit-linear-gradient(left, rgba(17, 209, 232, 0), rgba(17, 209, 232, 0.1), rgba(17, 209, 232, 0.3), rgba(17, 209, 232, 0));
+                 width: 135px;
+                 height: 24px;
+                 margin-top: 55px;
+                 .split_line{
+                    display: inline-block;
+                    height: 4px;
+                    width: 100%;
+                    background: radial-gradient(#10d0e5 10%, rgba(3, 20, 27, 0) 60%);
+                    position: absolute;
+                    left: 87%;
+                    transition: all .6s linear;
+                    &.split_line_top{
+                      left: 0;
+                      top: 0;
+                    }
+                    &.split_line_bottom{
+                      left: 0;
+                      bottom: 0;
+                    }
+                  }
+               }
+
+              .tab_icon{
+                position: relative;
+                height: 185px;
+                >div{
+                  background: url("imgs/titleicon.png") no-repeat;
+                  width: 185px;
+                  height:185px ;
+                  background-size: 100% 100%;
+                  animation: clockwiseRotate 5s linear infinite;
+                }
+                i{
+                  background: url("imgs/pro1.png") no-repeat center;
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  transform: translate(-50%,-50%);
+                  width: 70px;
+                  height: 70px;
+                  background-size: 100% 100%;
+                }
+                .icon_name{
+                  height: 20px;
+                  line-height: 20px;
+                  position: absolute;
+                  bottom: -17px;
+                  width: 100%;
+                  color: #fff;
+                }
+                &.tab_icon2{
+                  i{
+                    background-image: url("imgs/pro2.png")
+                  }
+                }
+                &.tab_icon3{
+                  i{
+                    background-image: url("imgs/pro3.png")
+                  }
+                }
+              }
+              &:nth-child(2){
+                animation-delay: .5s;
+              }
+              &:nth-child(3){
+                animation-delay: 1s;
+              }
+            }
+          }
+        }
+        .center_content_box{
+          width: 675px;
+          background: url("imgs/fenbo_contentbox.png") no-repeat center center;
+          background-size: 100% 600px;
+        }
+        .right_item_box{
+          width: 360px;
+          .right_items{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            li{
+              height: 30%;
+              display: flex;
+              justify-content: space-around;
+              /*animation: fangdasuoxiao2 10s linear infinite;*/
+              transform: translate(100%);
+              &.active{
+                .item_text{
+                  color:#a17c31 ;
+                  background: -webkit-linear-gradient(left, rgba(255, 174, 44, 0), rgba(255, 174, 44, 0.1), rgba(255, 174, 44, 0.3), rgba(255, 174, 44, 0));
+                  .split_line{
+                    background: radial-gradient(#a17c31 10%, rgba(255, 174, 44, 0) 60%);
+                  }
+                }
+
+                .tab_icon{
+                  position: relative;
+                  height: 185px;
+                  >div{
+                    background: url("imgs/titleiconhv.png") no-repeat;
+                    width: 185px;
+                    height:185px ;
+                    background-size: 100% 100%;
+                    animation: clockwiseRotate 5s linear infinite;
+                  }
+                  i{
+                    background: url("imgs/pro10.png") no-repeat center;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 70px;
+                    height: 70px;
+                    background-size: 100% 100%;
+                  }
+                  .icon_name{
+                    height: 20px;
+                    line-height: 20px;
+                    position: absolute;
+                    bottom: -17px;
+                    width: 100%;
+                    color: #fff;
+                  }
+                  &.tab_icon2{
+                    i{
+                      background-image: url("imgs/pro11.png")
+                    }
+                  }
+                  &.tab_icon3{
+                    i{
+                      background-image: url("imgs/pro12.png")
+                    }
+                  }
+                }
+              }
+              .item_text{
+                font-size: 22px;
+                text-align: center;
+                position: relative;
+                padding: 20px 0px 20px 0;
+                text-align: center;
+                transition: all .6s linear;
+                color: #19fabd;
+                background: -webkit-linear-gradient(left, rgba(17, 209, 232, 0), rgba(17, 209, 232, 0.1), rgba(17, 209, 232, 0.3), rgba(17, 209, 232, 0));
+                width: 135px;
+                height: 24px;
+                margin-top: 55px;
+
+                .split_line{
+                  display: inline-block;
+                  height: 4px;
+                  width: 100%;
+                  background: radial-gradient(#10d0e5 10%, rgba(3, 20, 27, 0) 60%);
+                  position: absolute;
+                  left: 87%;
+                  transition: all .6s linear;
+                  &.split_line_top{
+                    left: 0;
+                    top: 0;
+                  }
+                  &.split_line_bottom{
+                    left: 0;
+                    bottom: 0;
+                  }
+                }
+              }
+
+              .tab_icon{
+                position: relative;
+                height: 185px;
+                >div{
+                  background: url("imgs/titleicon.png") no-repeat;
+                  width: 185px;
+                  height:185px ;
+                  background-size: 100% 100%;
+                  animation: clockwiseRotate 5s linear infinite;
+                }
+                i{
+                  background: url("imgs/pro4.png") no-repeat center;
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  transform: translate(-50%,-50%);
+                  width: 70px;
+                  height: 70px;
+                  background-size: 100% 100%;
+                }
+                .icon_name{
+                  height: 20px;
+                  line-height: 20px;
+                  position: absolute;
+                  bottom: -17px;
+                  width: 100%;
+                  color: #fff;
+                }
+                &.tab_icon2{
+                  i{
+                    background-image: url("imgs/pro5.png")
+                  }
+                }
+                &.tab_icon3{
+                  i{
+                    background-image: url("imgs/pro6.png")
+                  }
+                }
+              }
+
+              &:nth-child(2){
+                animation-delay: .5s;
+              }
+              &:nth-child(3){
+                animation-delay: 1s;
+              }
+            }
+          }
+        }
+      }
+
+      #page4{
+        width:100%;
+        height: 100%;
+        overflow: hidden;
+        background: url("imgs/jindu_bj.png") no-repeat;
+        background-size: 100% 100%;
+        >div{
+          width: 1800px;
+          height: 600px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-around;
+          margin-top: 150px;
+          .left_content_box,
+          .right_content_box,
+          .center_content_box{
+            width: 550px;
+            height: 100%;
+            background: url("imgs/fenbo_contentbox.png") no-repeat center center;
+            background-size: 100% 100%;
+          }
+          .right_content_box{
+            .flow_title_txt{
+              width: 100%;
+              height: 35px;
+              line-height: 35px;
+              color: #00dec9;
+              margin-top: 30px;
+              font-size: 20px;
+              padding-left: 45px;
+              margin-bottom: 30px;
+              background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(239, 249, 250, 1)), to(rgba(0, 222, 201, 1)));
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+            .flow_line_btns{
+              width: 100%;
+              box-sizing: border-box;
+              display: flex;
+              flex-wrap:wrap;
+              padding: 0 30px;
+              justify-content: space-between;
+              li{
+                width: 30%;
+                height: 50px;
+                background: url("imgs/fenbo_btn_caveat.png") no-repeat;
+                background-size: 100% 100%;
+                margin-bottom: 20px;
+                text-align: center;
+                line-height: 50px;
+                color: #eceded;
+                font-size: 16px;
+                &:nth-child(3),&:nth-child(6),
+                &:nth-child(7),&:nth-child(8){
+                  line-height: 18px;
+                  padding: 8px 25px;
+                  box-sizing: border-box;
+                }
+                &.active{
+                  background: url("imgs/fenbo_btn_caveat_h.png") no-repeat center center;
+                 /* background-size: 100% 100%;*/
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .footer{
+    position: absolute;
+    bottom: 6.6%;
+    width: 100%;
+    height: .67rem;
+    .footer_items{
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      height: 100%;
+      li{
+        text-align: center;
+        /*background: url("imgs/btnicon.png") no-repeat;
+        width: 13%;
+        height: 100%;
+        background-size: 100% 100%;
+        line-height: .35rem;
+        font-size: 18px;
+        color: #bde8eb;
+        transition: all .5s linear;*/
+        font-weight: bold;
+        font-size: 18px;
+        color: #bde8eb;
+        span{
+          width: 100px;
+          height: 100px;
+          background: url(imgs/liubian.png) no-repeat;
+          display: inline-block;
+          background-size: 100% 100%;
+          position: relative;
+          /*transform: rotateY(0deg) rotateX(0deg);
+          transform-style: preserve-3d;*/
+          animation: fangdasuoxiao3 20s linear infinite;
+          i{
+            font-size: 32px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #19fabe;
+            font-weight: 100;
+          }
+        }
+        p{
+          color: #05fde2;
+          margin-top: 5px;
+        }
+        &.active,&:active{
+          /* background: url("imgs/btniconhv.png") no-repeat;*/
+          span{
+            background-size: 100% 100%;
+            color: #4a6756;
+            background: url(imgs/liubianactive.png) no-repeat;
+            display: inline-block;
+            background-size: 100% 100%;
+            i{
+              color: #fdff73 ;
+            }
+          }
+          p{
+            color: #fdff73 ;
+          }
+        }
+        &:nth-child(1){
+          span{
+            animation-delay: 0s;
+          }
+        }
+        &:nth-child(2){
+          span{
+            animation-delay: 2s;
+          }
+        }
+        &:nth-child(3){
+          span{
+            animation-delay: 4s;
+          }
+        }
+        &:nth-child(4){
+          span{
+            animation-delay: 6s;
+          }
+        }
+        &:nth-child(5){
+          span{
+            animation-delay: 8s;
+          }
+        }
+        &:nth-child(6){
+          span{
+            animation-delay: 10s;
+          }
+        }
+        &:nth-child(7){
+          span{
+            animation-delay: 12s;
+          }
+        }
+      }
+    }
+    img{
+      position: fixed;
+      bottom: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+
+.yugao_content .content_box #indexPage>.items_box>.item_lists>li:active{
+  background: url("imgs/home_big_btn_h.png") no-repeat ;
+  background-size: 100% 100%;
+  transition: all .1s linear;
+  >p{
+    color: #ffff99;
+    transition: all .1s linear;
+  }
+    &>div{
+      >p{
+        &:nth-child(1) {
+          background: url("imgs/quan_1_h.png") no-repeat center center;
+        }
+        &:nth-child(2) {
+          background: url("imgs/quan_2_h.png") no-repeat center center;
+        }
+        &:nth-child(3) {
+          background: url("imgs/quan_3_h.png") no-repeat center center;
+        }
+        &:nth-child(4) {
+          color: #ffff99;
+        }
+      }
+    }
+  }
+
+/*放大缩小*/
+@keyframes fangdasuoxiao {
+  0%,20%,100% {
+    transform: scale(1) translate(-50%,-50%);
+  }
+  10%{
+    transform: scale(.9) translate(-50%,-50%);
+  }
+}
+/*放大缩小*/
+@keyframes fangdasuoxiao1 {
+  0%,100% {
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(.8);
+  }
+}
+/*放大缩小*/
+@keyframes fangdasuoxiao2 {
+  0%,100% {
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(.9);
+  }
+}
+
+/*放大缩小*/
+@keyframes fangdasuoxiao3 {
+  0%,5%,10%,100% {
+    transform: scaleX(1);
+  }
+  2.5%,7.5%{
+    transform: scaleX(0.8);
+  }
+}
+
+
+/*渐进*/
+@keyframes moveToLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+/*渐进*/
+@keyframes moveToRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+
+/*旋转*/
+@keyframes xuanzhuan {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100%{
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes ani_show {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+
+
+
+#page4 .cf_dialog_box_bg{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,.6);
+  z-index: 999;
+}
+#page4  .dz_process_box{
+  position: absolute;
+  min-height: 200px;
+  background-color: #097c8e;
+  border: 1px solid #3a95d9;
+  margin-top: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 525px;
+}
+#page4 .dz_lt_pro_b{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid #49d9fe;
+  border-left: 2px solid #49d9fe;
+  top: -2px;
+  left: -2px;
+  animation: lt_pro 3s 0s infinite forwards;
+}
+#page4 .dz_lb_pro_b{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-left: 2px solid #49d9fe;
+  border-bottom: 2px solid #49d9fe;
+  bottom: -2px;
+  left: -2px;
+  animation: lb_pro 3s infinite forwards;
+}
+#page4 .dz_rt_pro_b{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid #49d9fe;
+  border-right: 2px solid #49d9fe;
+  top: -2px;
+  right: -2px;
+  animation: rt_pro 3s infinite forwards;
+}
+#page4 .dz_rb_pro_b{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-right: 2px solid #49d9fe;
+  border-bottom: 2px solid #49d9fe;
+  bottom: -2px;
+  right: -2px;
+  animation: rb_pro 3s infinite forwards;
+}
+#page4 .dz-title{
+  background: url("imgs/dzprotitbg.png") no-repeat bottom;
+  color: #01fffc;
+  padding-bottom: 8px;
+  font-size: 18px;
+}
+#page4 .dz_process_form {
+  padding: 20px 20px 50px; }
+#page4 .dz_process_form li {
+  margin-top: 34px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 15px;
+  background: #074c5e;
+  color: #01fffc;
+  letter-spacing: 1px;
+  font-size: 16px;
+  position: relative; }
+#page4 .dz_process_form li input{
+  font-size: 16px;
+  background: #074c5e;
+  color: #01fffc;
+  letter-spacing: 1px;
+}
+#page4 .dz_process_form li button {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHEAAAAsCAYAAABSblf5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3xpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpiODY1NGMxYi05MGE1LTcyNGQtYWQ1Ni1lY2U2ZWRiNjFlMTIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QjU5RkY3NzRDMTY4MTFFOUEyMjM5NDYyMkQ1NEQwNkUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QjU5RkY3NzNDMTY4MTFFOUEyMjM5NDYyMkQ1NEQwNkUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBMTlDOUU0OTY1QzFFOTExQkQwQUFEQkRFNjE2NkQ5MCIgc3RSZWY6ZG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjk3MzA5MTViLTA0YjUtYTE0Ny1iNDFjLTA5NmE1MDZhM2ZlOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pn3qYrYAAALdSURBVHja7JlRbtswDIZZgMCAXmbYUw+xnaAH2JW2vQ/IddqhQE/Q9wLtHpYHc2qToLItSxQlynJCAaol20kq//4oif/V9fMLwVbK6T8l8trekchrn67RuD/9LH1cJ1q4d9b2+kPsvkl7SHzXsU2h84ffeXV/H1x/59o/3XH/du1qEyKOBJuKMBEqIM5IeAqJxxSstrDD/Dzxf+fO1W+u/dS/iD3StyBAnL74fZT9Ar33793xBi+ePjiSA7GQpxVWYwIyxAT47I7fsXv6RsJl0geS8Jl4eFyRBzX6pv1bPBv6ID1oioXaaIjMm9c4woroC7+UX3Cz9C2FSxF9XAHKw2ol+vxxfsLzoG9xzgiIJ1/6i8KqJyxJBIPIvccB4ubpA+Wtw1C+Wq1CX2TOx+7oS811kB4oiee00rA6+a5BQB9E7l14FtgdfRAOGevRJwurVJIsYK+4Dx3sjj6IbdIr0ZexCc9a1PgCcj8DmddhLiquRh9E3rg16KsgLInmO8pbccMa4TQ7bRYIGZGBZqfNBoVFjS/gINrr8ekLrNZxlfDJoa9J0pqfXemNPv0thllGrAwSex0Q2it7YOBq9F2OZcRbyMQiU4hK73njWdPXj2VUib7A4rCKiGYZFdAXeRYJ+vyC1egzy6gpfeUimmUk30Zw6AtBECmoTp9ZRsm0mYQ+mYhmGRVbRjXpyxfRLKPqSetS+vgimmVU1TIKkkZy8dIimmWkQ1/G1kEuollGapZR8tlWEdEso2ZJ6xrizUU0y0jdMqpJ31hEs4w2Sd+cRLOMmlhGGgIeSTTLqJVlpFVQnLQ2y0hl414oollG2paRsohmGW2NvsScaJZRi6S14pxollGrpLVOODXLaFP0hcOpWUabos8rr8gZqFlG/dHnlQc8bAfMMmphGSmVHZpl1M4yUih/XP2FZhn1tXHPKPeufnX1Hxanzcwyaln+uvro6m9Xf7i6fzv5X4ABAAdSOeylTWQzAAAAAElFTkSuQmCC);
+  background-size: 100% 100%;
+  color: #fff;
+  width: 115px;
+  height: 44px;
+  position: absolute;
+  top: -2px;
+  right: 0;
+  z-index: 10;
+  font-size: 16px; }
+#page4 .dz_process_submit_form {
+  padding: 20px 20px 20px; }
+#page4 .dz_process_submit_form .dz-content {
+  padding-top: 25px; }
+#page4 .dz_process_submit_form .dz-content > div {
+  margin-bottom: 12px; }
+#page4 .dz_process_submit_form .dz-content > div:before,
+#page4 .dz_process_submit_form .dz-content > div:after {
+  display: table;
+  content: " "; }
+#page4  .dz_process_submit_form .dz-content > div:after {
+  clear: both; }
+#page4 .dz_process_submit_form .dz-content > div > div:first-child {
+  width: 22%;
+  float: left;
+  font-size: 16px;
+  color: #fff;
+  height: 40px;
+  line-height: 40px; }
+#page4 .dz_process_submit_form .dz-content > div > div:nth-child(2) {
+  width: 78%;
+  float: right;
+  min-height: 40px;
+  line-height: 24px;
+  color: #01fffc;
+  font-size: 16px;
+  background-color: #074c5e;
+  padding: 8px 15px;
+  box-sizing: border-box}
+#page4 .dz_process_submit_form .dz-content > div > div:nth-child(2)  input{
+  background-color: transparent;
+  color: #01fffc;
+  font-size: 16px;
+}
+#page4 .dz_process_submit_form .dz-content > div > div:nth-child(2) textarea{
+  background-color: transparent;
+  color: #01fffc;
+  font-size: 16px;
+  width: 100%;
+  height: auto;
+  resize:none
+}
+#page4 .dz_process_submit_form .dz-content > div .dz_btn {
+  padding: 20px 0 0 !important;
+  background-color: transparent !important; }
+#page4 .dz_process_submit_form .dz-content > div .dz_btn button:first-child {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAAA5CAYAAAD++yN2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkYxNjg4NDA2QzE2RjExRTk4NjlFOUVENTIyNERBREFDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkYxNjg4NDA3QzE2RjExRTk4NjlFOUVENTIyNERBREFDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjE2ODg0MDRDMTZGMTFFOTg2OUU5RUQ1MjI0REFEQUMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjE2ODg0MDVDMTZGMTFFOTg2OUU5RUQ1MjI0REFEQUMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6OqhbkAAADyElEQVR42uxdz2vUQBj9JpnttlKr3QVB9CCUFsSD4KEiVLBe9SLe/QMUL4KgCNqLVRC81LP4H/TgRQRRFIpWDwUFsbVQtYcqIkj9sdtNMibZmTo7maR7a5J9D762m83mMO/Ne9+m7besevocdQlGQJEgujmJd0k4yzgG5I9wIfkRWwmCZxDPMgoiyDf5trIKgVvI18uJyrlycQ8bOXCGXOdg+LiK9c41muQH78Xyymxwe+Zb+DiQpQthUwRM6wESxNOundy9M3WJ+qtXibEBrG2RPEE0qNGc9i9P3aWf655FCLEIXD52WBeAI8uN3MGduXUzJp+oghUtHDhxPumcPD4oHj5+mhYZSgBq57tSABVn+toEG959D+tYdBnwo874kRfiyfNVWwRwS/7Hu5/V6xdiwwCKj3rtfPj1pRYBm+8QeCL328ci+5gIcwSLVwa47jHJa6Ih5Mbu38x/EmyYwH9J4NQl177kOFAuYEaAK6uC3V8qMNnIe5Jf3+wBWMIFkP+lCwLJbccNPVsEtCuAA5QtB7RKCCDpAnCAMgogcTufU/J+fvtEOEAZ+wDHPGZzgPhnAQcoowDI5gBEtt/qwQF6Aul/DwAB9IQjZAgAK9TbDuDDARABQC8LAIuDCAAQAQAiAEAEAIgAABEAIAIARACACADKLwCBCEAEAIgAAA4AQAAAIgCAAwBwAAAOAJRSAAIO0HMQ2Q4ghJokARQfXjcR0DlXzvPXyHH3Yu1KgMD/SilzA7nF/tsnNH7N0cDQWaxeCfB3fY6SAyNjrrl190ct4NKbB+zQ5ClirB8rWOSkFw3x4dV9+j8bqGNGUDQmrnMwhBoT8/3zb1bbt0aD9ROU/LdioCjZv/bxBi08mqdogihRS/YDvhKCEoBdBF/efWJ9A29DEYyF/UAd61kgtJqLtLJwXbyefSbJ35DVIYBoVKwSAJfVF1a/rB3ye5VGxkdZbf8o8b6h6HVY4TyChc37xrr4sbpIy/NLkvhGWH+iTkATgidLqFnB+ozAiiGCqqyKLH3YEJCv9/WB3N0tWU1NBA1JvoqBeGag2QSqC3jyZPWcL0XRkgKwjY4Htpd8oXHlaWQ3bdZvuxGkC8A85mnku1pTCAHk0wF8jTO9dAF03AhSBwKDVF1RLiVnzRGEsO2kU4qL+9qu13d/qgPohJuW4lNyzhyIz58QhEZyoJFukk+mA6gXM8vNAkcTgJn9EED+BCAMDjM/McTmAMxyIZbR+EEE+YkBUwQ20jM/MyjtgoRdX0g3SOM0UwBZTQZ2fbHcYEv8E2AAyFB6g67zljoAAAAASUVORK5CYII=);
+  width: 128px;
+  height: 57px;
+  background-size: 100% 100%;
+  line-height: 50px;
+  text-align: center;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px; }
+#page4 .dz_process_submit_form .dz-content > div .dz_btn button:last-child {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAAA5CAYAAAD++yN2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTkxNjVCRDNDMTc2MTFFOUIwNEU4OThGREIxRDEyNDAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTkxNjVCRDRDMTc2MTFFOUIwNEU4OThGREIxRDEyNDAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1OTE2NUJEMUMxNzYxMUU5QjA0RTg5OEZEQjFEMTI0MCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1OTE2NUJEMkMxNzYxMUU5QjA0RTg5OEZEQjFEMTI0MCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pl2isq4AAASYSURBVHja7J2/axRBFMff7M3lYhJOApr4q7DQoCjYiAlYa6XYiFhZahMhoBBQEGwEsQmo4F9gIRaCpSBIEBKwEFFRA6KFmmAhHP64S27nuZds7mZn3+zuXQ7lZt+DYWezmx/M+8z3vZnLvhWlE+dKACDCBuHR0/pJDTIczT5bdkOin3RMag1T5v3S4nyRsUECDAxA9wGwOT0LABj6dh2CVZ/IFOd3AgOrwL+d/Vma0n5WBAJpcX6kXz9zequamDiJ/aWx4LwU/uqmQwUqYfzphrORnd+RCYyeRqAIRtVD4lpNVGsfvLm5x/LBw++hsz0DhCYEIsgBBqzO7y8Vlm/euIjl8mUQYhM7pJf0A6uiUrnVN33lNlRrvqEGzX4DgCHC+Y2jV7szcw0GByZ5NHvYfv2+W5qcuh46XpkQFOTYoZIBwGpbuTo9jqMjMzyCPW7F4hE8eGC2MPv8C3VZ2hI+tWv7hWjuwNarFvjyfHCYN3ytTAAiCgBFeRSQAXBDBeS4trezvh8gKAC0hsNBIsGD54ZtsS3dJTn7G41nv1PrSUMBmnsJUlsXRkMBA+Care8F6BPet4cABsBFFYg1cyu4tRpgAFwNA6j7PEEBfB6yHClAXAVYAVzOAUAHAID65I8VwGUF8PRVgCBvYgBcBgAy5AAcAvKSAwCZB7ACuApApE8lgWvGALgMQiwJBF4G5i4EgE0BGIB8JIGkArRMcRKYgzAA0koKK4DLSSCYAMT/nZsBcDn5A7A8F9Ay3gfIBQzSegsrQC7MDoBiAPINACsAA8CWDwDMR4hX3c8AOGfUk8YoiZuQFcBpCDBLCEBeBjqtANYQwAqQDwWwhgDOAXKoACQZHALcn/16CIjfxArgMgDNr0lbdsgKkI/VAJUErtWUYQBcdLqikkC65BgD4GoSGPFzUhKoP0XC1ttWT0sC42HAV1/BEzt57BwwXy1S8q+HADMHEKK6PIsDxbM8er1vorbyLC0HiDXv7dI9//COU0Gf6wP2tv3xXn27Z/Nzo0xcPxAPh3gff1TUnuHPMNR3HOLlRdh6JPaLxZ+Xio/evwCiRiAFQASCwsulBdw2OI/lvv0BAiPZS9Ny+++t7r8OJvFU3/03T23Oh7BU7GYwC0S1WmG9Xz+2ey+ODu7DYqEMiF6zHjCiEKjBE5wbtYJ5JdGd5dtaPWDRrB8cjnR4vtZXoq4qwax/J598WoBWdVBf60daA4Ay4XhhACDCvllO1lZRHMBeSZyts3W7rUK4Io5mWVjfcl1JsJcUx/AbwXAiQrTahCJAgBTnMwxpsz1h88Ym50DXA/aJ64paBYAFBB+ibxBBiJYbEwYISTOfHd8+CO28G0AlwKDSloEArdryinAaarPcrDeXRfbZ+RuDwKYGqo2wELvfBICCgJL/dmY+Q9A9BaCUAFJUAJNWARL0TwBpCMzZTcl/WtznRLDzBDBLPpA1JMSuSUL+dQhEwswHaP+9QZwIZk8AkxSgXSWwgiGNH6pn9Kbp75sB6Oz1cez4ja0E0kDQ/ZSmCJFPAwWRB9jeDuZvwPkMQfdVIMtege09gvhXgAEAJhX70N51r3sAAAAASUVORK5CYII=);
+  width: 128px;
+  height: 57px;
+  background-size: 100% 100%;
+  line-height: 50px;
+  text-align: center;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px; }
+
+@keyframes enlarge {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.1); } }
+
+@keyframes lt_pro {
+  0% {
+    width: 15px;
+    height: 15px;
+    top: -2px;
+    left: -2px; }
+  50% {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    left: -10px; }
+  100% {
+    width: 15px;
+    height: 15px;
+    top: -2px;
+    left: -2px; } }
+
+@keyframes lb_pro {
+  0% {
+    width: 15px;
+    height: 15px;
+    bottom: -2px;
+    left: -2px; }
+  50% {
+    width: 20px;
+    height: 20px;
+    bottom: -10px;
+    left: -10px; }
+  100% {
+    width: 15px;
+    height: 15px;
+    bottom: -2px;
+    left: -2px; } }
+
+@keyframes rt_pro {
+  0% {
+    width: 15px;
+    height: 15px;
+    top: -2px;
+    right: -2px; }
+  50% {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    right: -10px; }
+  100% {
+    width: 15px;
+    height: 15px;
+    top: -2px;
+    right: -2px; } }
+
+@keyframes rb_pro {
+  0% {
+    width: 15px;
+    height: 15px;
+    bottom: -2px;
+    right: -2px; }
+  50% {
+    width: 20px;
+    height: 20px;
+    bottom: -10px;
+    right: -10px; }
+  100% {
+    width: 15px;
+    height: 15px;
+    bottom: -2px;
+    right: -2px; } }
+
+
+.moveToLeft{
+  animation-duration:1s;
+  animation-timing-function:linear;
+  animation-name:moveToLeft;
+  animation-fill-mode : forwards
+}
+
+.moveToRight{
+  animation-duration:1s;
+  animation-timing-function:linear;
+  animation-name:moveToRight;
+  animation-fill-mode : forwards
+}
